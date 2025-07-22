@@ -9,6 +9,7 @@
   --color-text-primary: #6d7485;
   --font-primary: "Gilory";
   --font-secondary: "BC_Novatica";
+  --space-m: 2.4rem;
 }
 /* ========================================
    font family
@@ -40,11 +41,11 @@
     ======================================== */
 
 /* ========================================
-   text class
+   text 
 ======================================== */
 
 .title--primary {
-  margin: 2.4rem 0;
+  margin: var(--space-m) 0;
   font-family: var(--font-secondary);
   color: var(--color-text-header);
   font-size: 4.4rem;
@@ -59,7 +60,7 @@
 }
 
 .text {
-  margin: 2.4rem 0;
+  margin: var(--space-m) 0;
   font-family: var(--font-primary);
   color: var(--color-text-primary);
   font-size: 1.8rem;
@@ -74,16 +75,19 @@
 }
 
 /* ========================================
-  button class
+  button 
 ======================================== */
 
 .button {
-  padding: 1.4rem 2.4rem;
+  padding: 1.4rem var(--space-m);
   color: var(--color-bg-white);
   background-color: var(--color-primary-blue);
   font-family: "Gilory-bold";
   border: none;
   border-radius: 1.2rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+  letter-spacing: 0.12rem;
 }
 
 /* ========================================
@@ -98,3 +102,27 @@
 /* ========================================
   grid class
 ======================================== */
+.grid {
+  display: grid;
+  align-items: center;
+  gap: var(--space-m);
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--3-rows{
+  grid-template-rows: repeat(3, 1fr);
+
+}
+/* ========================================
+  image
+======================================== */
+.image {
+  width:25rem;
+}
